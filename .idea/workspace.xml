@@ -49,9 +49,12 @@
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+      <method v="2" />
+    </configuration>
+    <configuration name="com.ryanw.console.HelloWorld" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.ryanw.console.HelloWorld" />
+      <module name="schoolwork.main" />
+      <method v="2" />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="TEST_OBJECT" value="class" />
