@@ -1,6 +1,6 @@
 package com.ryanw.logic;
 
-public class SimpleIf {
+public class CombiningBooleans {
     public static void main(String[] args) {
 
     }

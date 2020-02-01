@@ -1,6 +1,6 @@
 package com.ryanw.logic;
 
-public class SimpleIf {
+public class AdjustingLogic {
     public static void main(String[] args) {
 
     }

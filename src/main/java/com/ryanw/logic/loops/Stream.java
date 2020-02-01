@@ -1,6 +1,6 @@
-package com.ryanw.logic;
+package com.ryanw.logic.loops;
 
-public class SimpleIf {
+public class Stream {
     public static void main(String[] args) {
 
     }
