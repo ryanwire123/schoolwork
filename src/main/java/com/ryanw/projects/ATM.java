@@ -9,23 +9,43 @@ import java.util.Scanner;
 // 5. exit the program with "exit"
 public class ATM {
     public static void main(String[] args) {
-      double cash = 100.00;
-      Scanner scanner = new Scanner(System.in);
+        double cash = 100.00;
+        Scanner scanner = new Scanner(System.in);
 
-      while (true) {
-        String input = scanner.nextLine();
-  
-        String[] breakdown = input.split(" ");
+        while (true) {
+            String input = scanner.nextLine();
+            String[] breakdown = input.split(" ");
 
-        if (breakdown[0].equalsIgnoreCase("exit")) {
-          break;
-        } 
-  
-        System.out.println(breakdown[0]);
-        System.out.println(breakdown[1]);
+            if (breakdown[0].equalsIgnoreCase("deposit")) {
+                int deposit = scanner.nextInt();
+                cash = cash + deposit;
+                System.out.println("Your deposit of " + deposit + " has been accepted");
+                break;
+            }
+            if (breakdown[0].equalsIgnoreCase("withdraw")) {
+                int withdraw = scanner.nextInt();
+                if (cash >= withdraw) {
+                    cash = cash - withdraw;
+                    System.out.println("You withdrew " + withdraw);
+                } else {
+                    System.out.println("Insufficient Funds");
+                }
+                break;
+            }
+            if (breakdown[0].equalsIgnoreCase("Total")) {
+                System.out.println("Your Total is " + cash);
+                break;
+            }
+            if (breakdown[0].equalsIgnoreCase("exit")) {
+                break;
+            }
 
-        
-      }
-      System.out.println("closing");
+            System.out.println(breakdown[0]);
+            System.out.println(breakdown[1]);
+
+
+        }
+        System.out.println("closing");
     }
 }
+
