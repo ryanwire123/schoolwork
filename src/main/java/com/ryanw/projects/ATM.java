@@ -20,9 +20,7 @@ public class ATM {
                 int deposit = scanner.nextInt();
                 cash = cash + deposit;
                 System.out.println("Your deposit of " + deposit + " has been accepted");
-                break;
-            }
-            if (breakdown[0].equalsIgnoreCase("withdraw")) {
+            } else if (breakdown[0].equalsIgnoreCase("withdraw")) {
                 int withdraw = scanner.nextInt();
                 if (cash >= withdraw) {
                     cash = cash - withdraw;
@@ -30,13 +28,11 @@ public class ATM {
                 } else {
                     System.out.println("Insufficient Funds");
                 }
-                break;
-            }
-            if (breakdown[0].equalsIgnoreCase("Total")) {
+
+            } else if (breakdown[0].equalsIgnoreCase("Total")) {
                 System.out.println("Your Total is " + cash);
-                break;
-            }
-            if (breakdown[0].equalsIgnoreCase("exit")) {
+
+            } else if (breakdown[0].equalsIgnoreCase("exit")) {
                 break;
             }
 
