@@ -1,5 +1,6 @@
 package com.ryanw.projects;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 // 1. Keep track of a running value
@@ -13,15 +14,19 @@ public class ATM {
         Scanner scanner = new Scanner(System.in);
 
         while (true) {
+            System.out.print("enter command: ");
             String input = scanner.nextLine();
             String[] breakdown = input.split(" ");
+            System.out.println(Arrays.toString(breakdown));
 
             if (breakdown[0].equalsIgnoreCase("deposit")) {
-                int deposit = scanner.nextInt();
+                //int deposit = scanner.nextInt();
+                int deposit = Integer.parseInt(breakdown[1]);
                 cash = cash + deposit;
                 System.out.println("Your deposit of " + deposit + " has been accepted");
             } else if (breakdown[0].equalsIgnoreCase("withdraw")) {
-                int withdraw = scanner.nextInt();
+                //int withdraw = scanner.nextInt();
+                int withdraw = Integer.parseInt(breakdown[1]);
                 if (cash >= withdraw) {
                     cash = cash - withdraw;
                     System.out.println("You withdrew " + withdraw);
@@ -35,11 +40,6 @@ public class ATM {
             } else if (breakdown[0].equalsIgnoreCase("exit")) {
                 break;
             }
-
-            System.out.println(breakdown[0]);
-            System.out.println(breakdown[1]);
-
-
         }
         System.out.println("closing");
     }
